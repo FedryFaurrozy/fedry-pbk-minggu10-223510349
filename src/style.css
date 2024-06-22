@@ -1,21 +1,24 @@
 body {
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .app {
   max-width: 600px;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  border-radius: 15px; /* Membuat sudut lebih bulat */
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
 }
 
 .todo-list {
@@ -23,16 +26,18 @@ h1 {
 }
 
 .todo-list input[type="text"] {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #ddd;
+  border-radius: 15px; /* Membuat sudut lebih bulat */
   font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .todo-list ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .todo-list li {
@@ -41,10 +46,16 @@ h1 {
   justify-content: space-between;
   padding: 10px;
   cursor: pointer;
+  border-bottom: 1px solid #eee;
+  border-radius: 5px; /* Membuat sudut lebih bulat */
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
 }
 
 .todo-list li:hover {
-  background-color: #eee;
+  background-color: #fafafa;
 }
 
 .todo-list .completed {
@@ -62,6 +73,7 @@ h1 {
   color: #aaa;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
+  font-weight: bold;
 }
 
 .todo-list button:hover {
@@ -71,8 +83,67 @@ h1 {
 .filter-container {
   display: flex;
   margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.filter-container button {
+  background-color: #f2f2f2;
+  color: #444;
+  padding: 5px 10px;
+  border-radius: 10px; /* Membuat sudut lebih bulat */
+  border: 1px solid #ccc;
+}
+
+.filter-container button:hover {
+  background-color: #e0e0e0;
 }
 
 .filter-container label {
   margin-right: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+nav {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 10px; /* Membuat sudut lebih bulat */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #444;
+}
+
+footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
 }
